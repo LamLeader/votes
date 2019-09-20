@@ -19,6 +19,6 @@
                      <text class="weui-grid__label">{{item.title}}</text>
                 </view>
             </navigator>
-             <button bindtap="queryReport" data-index="{{index}}" data-title="{{item.title}}" class='goodbutton'  hover-class="hover">报表</button>
+            <!-- <button bindtap="queryReport" data-index="{{index}}" data-title="{{item.title}}" class='goodbutton'  hover-class="hover">报表</button>-->
         </view>
 </view>

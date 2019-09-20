@@ -128,19 +128,16 @@ Page({
   onProductsItmesTap:function(event){
     var id = event.currentTarget.dataset.id;
     console.log("even:" + id);
-      wx.navigateTo({
-        url: 'homedetails/homedetails?id='+id,
-      });
   },
   //投票报表
   queryReport: function (event) {
-    var that = this;
+    /*var that = this;
     console.log("index:" + event.currentTarget.dataset.index)
     let index = event.currentTarget.dataset.index;
     var title = event.currentTarget.dataset.title;
     wx.navigateTo({
       url: '/pages/report/report?index=' + index + "&title=" + title,
-    });
+    });*/
 
   }
  

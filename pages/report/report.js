@@ -27,7 +27,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log("--- onLoad is run----tid:" + options.index);
+    /*console.log("--- onLoad is run----tid:" + options.index);
     let indexId = options.index;
     console.log("indexId:" + indexId);
     var title=options.title;
@@ -36,7 +36,7 @@ Page({
     that.setData({
       indexId: indexId,
       title: that.data.columnDate.title
-    })
+    })*/
     that.initQuery();//初始化接口数据
   },
   //初始化方法
@@ -63,18 +63,15 @@ Page({
           var names = res.data.data;
           for(let index in pf){
             console.log("pf:"+pf[index].pf);
+            dataScore.push(pf[index].pf);
           }
           for (let index in names) {
             console.log("names:" + names[index].title);
+            dataUserName.push(names[index].title);
           }
-          
-          that.setData({
-            score: [pf],
-            name: [names]
-          });
          
-          that.data.columnDate.categories = that.data.name[0];
-          that.data.columnDate.data = that.data.score[0];
+          that.data.columnDate.categories = dataUserName;
+          that.data.columnDate.data = dataScore;
           //赋值
           that.setData({
             categories: that.data.columnDate.categories,
@@ -82,6 +79,12 @@ Page({
             name: dataUserName,
             score: dataScore,
           })
+          
+          for (let index in that.data.columnDate.categorie) {
+            console.log("titles:" + that.data.columnDate.categorie[index]);
+          
+          }
+
           that.chartInit();//初始化图表
         } else {
           wx.showModal({
@@ -130,7 +133,7 @@ Page({
       animation: true,
       categories: that.data.columnDate.categories,
       series: [{
-        name: that.data.columnDate.title,
+        name: '项目详情',
         color: '#188df0',
         data: that.data.columnDate.data,
         format: function (val, name) {
