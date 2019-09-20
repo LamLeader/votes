@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">  
+        <swiper-item data-id="{{item.id}}" bindtap="onProductsItmesTap">  
+           <navigator url="{{item.link}}" hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="slide-image" width="355" height="150"/>  
+           </navigator>   
+        </swiper-item>  
+      </block>  
+</swiper> 
+ <view class="titles"> {{title}}</view>
+  <view class="tip">提交成功后返回主页</view>
+  <view class="timing">{{time}}s<text>后自动关闭</text></view>
+<view class="weui-grids">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label class="radio" wx:for="{{items}}" wx:key="answer">
+                  <radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.answer}}
+                  <view>\n</view>
+              </label>
+            </radio-group>
+           </view>
+        </view>
+       <view class="viewBtn">
+            <button type="swi" class="viewBtn"  formType="submit" hover-class="other-button-hover"> 提交 </button> 
+       </view>
+    </form>
+        
+</view>

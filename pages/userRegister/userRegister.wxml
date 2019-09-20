@@ -1,0 +1,16 @@
+<!--pages/getinto.wxml-->
+<view class='container'>
+  <view class="login-icon">
+  <image class='login-img' src='../../images/vote.gif'></image>
+  </view>
+  <view class='login-from'>
+    
+    <view class="login">
+       <button class='loginbtn' type='primary ' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">注册登录</button>
+      <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+</view>

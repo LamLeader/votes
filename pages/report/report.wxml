@@ -1,0 +1,17 @@
+<view class="box">
+<view class="containerColumn">
+    <!--标题-->
+    <view class="title">
+        {{chartTitle}}
+    </view>
+    <!--绘制canvas柱状图-->
+    <canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+</view>
+<!-- 分割线 -->
+<view class="divLine"></view>
+ <!--绘制canvas柱状图-->
+    <canvas canvas-id="columnCanvas2" class="canvas" bindtouchstart="touchHandler"></canvas>
+</view>
+
+
+

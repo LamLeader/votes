@@ -1,0 +1,30 @@
+<view class="bg">
+  <!--<view class="head">
+    <view class="headIcon">
+      <image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
+    </view>
+    <view class="login">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <button class="button" open-type="getUserInfo" wx:if="{{hasUserInfo}}" bindgetuserinfo="doAuthorization"> 微信登录 </button>-->
+  <image src="../../images/vote.gif" ></image>
+</view>
+<view class="hr"></view>
+<view class="line"></view>
+<view class="hr"></view>
+<view class='item' bindtap="loginOut">
+  <view class="title">退出登录</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="line"></view>
+<view class="line"></view>
+<view class="item" bindtap="report" >
+  <view class="title">报表</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="hr"></view>

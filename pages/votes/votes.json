@@ -1,0 +1,8 @@
+
+{
+  "component": true,
+  "navigationBarBackgroundColor": "#00BFFF",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "投票",
+  "usingComponents": {}
+}
